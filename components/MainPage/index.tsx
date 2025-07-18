@@ -214,7 +214,7 @@ function ParallaxProvider({ sections: sectionList }: ParallaxProviderProps) {
   }, [currentTheme]);
   const [phase, setPhase] = useState<number>(0);
   const [currentSection, setCurrentSection] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimating] = useState(false);
 
   const sectionRefs = useRef(sectionList.map(() => createRef<HTMLElement>()));
   const containerRef = useRef<HTMLDivElement | null>(null);
