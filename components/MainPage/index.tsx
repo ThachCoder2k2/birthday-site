@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
-import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronLeft } from 'lucide-react';
 import { Lora, Merriweather } from 'next/font/google';
 import React, {
   createContext,
@@ -22,11 +22,11 @@ import React, {
   useState,
 } from 'react';
 import { InitialPage } from '../pages/initial-page';
-import TestPage from '../pages/test-page';
-import SectionsSelection from '../pages/sections-selection';
 import ParallaxGallery from '../pages/parallax-gallery';
-import WordsTranfer from '../pages/words-transfer';
+import SectionsSelection from '../pages/sections-selection';
+import TestPage from '../pages/test-page';
 import BirthdayScene from '../pages/the-end';
+import WordsTranfer from '../pages/words-transfer';
 
 const lora = Lora({
   subsets: ['latin'],

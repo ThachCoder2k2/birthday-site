@@ -9,7 +9,6 @@ const SectionsSelection = () => {
   const theme = context?.theme;
   const { nextSection } = useParallax();
 
-  const [animationCompleted, setAnimationCompleted] = useState(false);
   const [canClickGift, setCanClickGift] = useState(false);
 
   const loveMessages = [
@@ -22,8 +21,7 @@ const SectionsSelection = () => {
   ];
 
   const handleAnimationLoopComplete = () => {
-    setAnimationCompleted(true);
-    setCanClickGift(true); // Allow gift to be clickable after first loop
+    setCanClickGift(true);
   };
 
   const handleGiftClick = () => {};

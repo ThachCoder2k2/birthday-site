@@ -59,18 +59,13 @@ export const InitialPage = forwardRef<HTMLElement, {}>(function InitialPage() {
 
   return (
     <section className="w-full h-full flex items-center justify-center">
-           {' '}
-      {/* Attach the ref to the main div that contains the animated elements */}
-           {' '}
       <div
         ref={compRef}
         className={cn('relative z-50 text-center px-6', theme.primary)}
       >
-               {' '}
         <h1 className="hero-heading text-6xl md:text-8xl font-bold mb-10 font-waiting ">
-                    A journey with me???       {' '}
+          A journey with me???
         </h1>
-                       {' '}
         <button
           className={`
           relative group px-12 py-6 text-2xl font-bold text-white cursor-pointer

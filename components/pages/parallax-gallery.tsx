@@ -1,20 +1,13 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Card } from '@/components/ui/card';
-import {
-  Heart,
-  Sparkles,
-  Gift,
-  LucideIcon,
-  Heart as HeartIcon,
-  ArrowRightIcon,
-} from 'lucide-react'; // Import Heart as HeartIcon if you also use Heart elsewhere
+import { ArrowRightIcon, Heart as HeartIcon } from 'lucide-react'; // Import Heart as HeartIcon if you also use Heart elsewhere
+import { useContext, useEffect, useRef, useState } from 'react';
 import { ParallaxContext, useParallax } from '../MainPage';
-import { cn } from '@/lib/utils';
-import { ComicHeader } from './love-story';
-import Games from './game';
 import LoveAlbum from './gallery';
+import Games from './game';
+import { ComicHeader } from './love-story';
 
 gsap.registerPlugin(ScrollTrigger);
 
