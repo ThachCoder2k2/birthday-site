@@ -61,7 +61,7 @@ export const InitialPage = forwardRef<HTMLElement>(function InitialPage() {
     <section className="w-full h-full flex items-center justify-center">
       <div
         ref={compRef}
-        className={cn('relative z-50 text-center px-6', theme.primary)}
+        className={cn('relative z-50 text-center px-6', theme?.primary)}
       >
         <h1 className="hero-heading text-6xl md:text-8xl font-bold mb-10 font-waiting ">
           A journey with me???

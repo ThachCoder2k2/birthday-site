@@ -288,7 +288,7 @@ export default function BirthdayScene() {
         <p
           className={cn(
             'text-3xl md:text-4xl text-rose-300 font-light animate-bounce tracking-wide',
-            theme.primary
+            theme?.primary
           )}
         >
           Make a wish babi!!!!

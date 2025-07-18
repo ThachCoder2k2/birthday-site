@@ -226,7 +226,7 @@ const ParallaxGallery = () => {
                     <HeartIcon
                       className={cn(
                         'static-heart-icon text-white opacity-0 scale-90',
-                        theme.secondary
+                        theme?.secondary
                       )}
                       size={64}
                     />

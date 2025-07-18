@@ -64,7 +64,7 @@ export function StoryPanel({
           <h2
             className={cn(
               'text-4xl font-extrabold text-shadow-outline gradient-love bg-clip-text text-transparent leading-tight',
-              theme.primary
+              theme?.primary
             )}
           >
             {' '}
