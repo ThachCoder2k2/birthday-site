@@ -88,7 +88,6 @@ export const InitialPage = forwardRef<HTMLElement, {}>(function InitialPage() {
           onMouseUp={() => setIsPressed(false)}
           onMouseLeave={() => setIsPressed(false)}
         >
-          {/* Animated background sparkles */}
           <div className="absolute inset-0 opacity-30">
             <Sparkles className="absolute top-2 left-4 w-4 h-4 animate-pulse" />
             <Sparkles className="absolute bottom-3 right-6 w-3 h-3 animate-pulse delay-300" />
