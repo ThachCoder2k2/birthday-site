@@ -91,6 +91,8 @@ const themes = {
 };
 export type ThemeKey = keyof typeof themes;
 
+export type Theme = (typeof themes)[ThemeKey];
+
 const FloatingObject = React.memo(function FloatingObject({
   index,
 }: {
@@ -181,7 +183,7 @@ interface ParallaxContextType {
   }[];
   nextSection: () => void;
   prevSection: () => void;
-  theme: any;
+  theme: Theme;
 }
 
 export const ParallaxContext = createContext<ParallaxContextType | undefined>(
