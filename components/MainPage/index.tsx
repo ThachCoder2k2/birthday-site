@@ -301,20 +301,20 @@ function ParallaxProvider({ sections: sectionList }: ParallaxProviderProps) {
   return (
     <ParallaxContext.Provider value={contextValue}>
       <div
-        className={`fixed inset-0 w-screen h-screen ${theme.background} transition-all duration-1000 -z-10`}
+        className={`fixed inset-0 w-screen h-screen ${theme?.background} transition-all duration-1000 -z-10`}
       >
         {objects.map((index) => (
           <FloatingObject key={index} index={index} />
         ))}
       </div>
 
-      <div className={cn('relative h-screen z-0 ', theme.textFontPrimary)}>
+      <div className={cn('relative h-screen z-0 ', theme?.textFontPrimary)}>
         <DropdownMenu>
           <DropdownMenuTrigger
             className={cn(
               'flex items-center gap-1 text-black hover:opacity-70 focus:outline-none absolute top-4 left-4 z-50 cursor-pointer ',
-              theme.textFontPrimary,
-              theme.secondary
+              theme?.textFontPrimary,
+              theme?.secondary
             )}
           >
             Select Theme
@@ -323,8 +323,8 @@ function ParallaxProvider({ sections: sectionList }: ParallaxProviderProps) {
           <DropdownMenuContent
             className={cn(
               'bg-transparent border-none shadow-none p-0',
-              theme.textFontPrimary,
-              theme.secondary
+              theme?.textFontPrimary,
+              theme?.secondary
             )}
           >
             {Object.entries(themes).map(([key, value]) => (

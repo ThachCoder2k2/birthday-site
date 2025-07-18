@@ -34,7 +34,7 @@ const SectionsSelection = () => {
           <div
             className={cn(
               'flex items-center justify-center gap-4 mb-8 ',
-              theme.secondary
+              theme?.secondary
             )}
           >
             <Heart className="text-primary animate-pulse" size={48} />

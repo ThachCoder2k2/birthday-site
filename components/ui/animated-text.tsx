@@ -70,7 +70,7 @@ const AnimatedText = ({
   return (
     <div
       ref={textRef}
-      className={cn(`inline-block ${className}`, theme.secondary)}
+      className={cn(`inline-block ${className}`, theme?.secondary)}
     >
       {texts[0]}
     </div>

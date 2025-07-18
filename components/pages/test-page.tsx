@@ -136,7 +136,7 @@ function TestPage() {
       ref={containerRef}
       className="flex flex-col w-full h-full items-center justify-center font-semibold text-center p-8 bg-yellow-200"
     >
-      <div className={cn('flex flex-col mb-10', theme.primary)}>
+      <div className={cn('flex flex-col mb-10', theme?.primary)}>
         <div className={cn(font.className, 'text-4xl mb-4 text-left')}>
           {dearWords.flatMap((wordSpan, index, array) => {
             if (index < array.length - 1) {
@@ -177,7 +177,7 @@ function TestPage() {
         className={cn(
           'flex items-center gap-2 cursor-pointer click-here-elements ',
 
-          theme.secondary
+          theme?.secondary
         )}
       >
         <CornerDownRightIcon size={24} />

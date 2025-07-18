@@ -161,7 +161,7 @@ function WordsTransfer() {
         <div
           className={cn(
             'relative w-full max-w-4xl h-32 flex items-center justify-center',
-            theme.primary
+            theme?.primary
           )}
         >
           {sentences.map((sentence, index) => (
@@ -171,7 +171,7 @@ function WordsTransfer() {
                 sentenceRefs.current[index] = el;
               }}
               className={cn(
-                theme.secondary,
+                theme?.secondary,
                 'absolute text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-relaxed'
               )}
             >
@@ -183,7 +183,7 @@ function WordsTransfer() {
         <div
           className={cn(
             'flex items-center gap-2 cursor-pointer click-here-elements opacity-0 hover:scale-105 transition-transform duration-200',
-            theme.secondary
+            theme?.secondary
           )}
           onClick={waveTransition}
         >
