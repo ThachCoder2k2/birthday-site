@@ -17,7 +17,7 @@ export function ComicHeader({ setIsOpen }: Props) {
       <div
         className={cn(
           'relative z-10 w-full px-4 sm:px-6 lg:px-8', // Added horizontal padding
-          theme.secondary // Apply theme color if available (e.g., text color)
+          theme?.secondary // Apply theme color if available (e.g., text color)
         )}
       >
         {/* Story Panels Container */}
@@ -55,7 +55,7 @@ export function ComicHeader({ setIsOpen }: Props) {
         className="absolute right-3 top-3 h-10 w-10 shrink-0 rounded-full flex items-center justify-center  bg-white cursor-pointer"
         onClick={() => setIsOpen(false)}
       >
-        <ArrowLeftIcon className={theme.primary} size={32} />
+        <ArrowLeftIcon className={theme?.primary} size={32} />
       </div>{' '}
     </div>
   );
