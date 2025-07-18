@@ -17,6 +17,6 @@
 },
 "plugins": ["react", "react-hooks"],
 "rules": {
-// Add custom rules here if needed
+  "@next/next/no-img-element": "off"
 }
 }
