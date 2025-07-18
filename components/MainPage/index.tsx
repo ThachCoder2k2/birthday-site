@@ -112,7 +112,7 @@ const FloatingObject = React.memo(function FloatingObject({
     const iconSrc = `/icons/image${x}x${y}.png`;
 
     function seededRandom(seed: number) {
-      let x = Math.sin(seed) * 10000;
+      const x = Math.sin(seed) * 10000;
       return x - Math.floor(x);
     }
     const rand = (offset: number) => seededRandom(index * 100 + offset);
@@ -351,8 +351,7 @@ function ParallaxProvider({ sections: sectionList }: ParallaxProviderProps) {
 }
 
 function NavigationArrows() {
-  const { currentSection, isAnimating, nextSection, prevSection, sections } =
-    useParallax();
+  const { currentSection, isAnimating, prevSection } = useParallax();
 
   return (
     <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-4">

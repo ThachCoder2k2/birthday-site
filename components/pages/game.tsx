@@ -1,19 +1,10 @@
 'use client';
 
-import { useContext, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Heart,
-  Gift,
-  Check,
-  X,
-  RotateCcw,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-} from 'lucide-react';
-import { ParallaxContext, useParallax } from '../MainPage';
 import { cn } from '@/lib/utils';
+import { ArrowRightIcon, Check, X } from 'lucide-react';
+import { useState } from 'react';
 
 interface Question {
   id: string;
@@ -113,9 +104,6 @@ export default function Games({ setIsOpen }: Props) {
     correctlyAnsweredIndices: new Set<number>(),
   });
 
-  const context = useContext(ParallaxContext);
-  const theme = context?.theme;
-
   const selectAnswer = (answerIndex: number) => {
     setQuizState((prev) => ({
       ...prev,
@@ -181,16 +169,6 @@ export default function Games({ setIsOpen }: Props) {
         showFeedback: false,
       }));
     }
-  };
-
-  const resetQuiz = () => {
-    setQuizState({
-      currentQuestion: 0,
-      selectedAnswer: null,
-      showFeedback: false,
-      score: 0,
-      correctlyAnsweredIndices: new Set<number>(),
-    });
   };
 
   const currentQ = mockQuestions[quizState.currentQuestion];

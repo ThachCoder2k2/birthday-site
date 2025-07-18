@@ -9,7 +9,7 @@ import gsap from 'gsap'; // Import gsap
 import { useGSAP } from '@gsap/react'; // Import useGSAP
 import { Play, Sparkles } from 'lucide-react';
 
-export const InitialPage = forwardRef<HTMLElement, {}>(function InitialPage() {
+export const InitialPage = forwardRef<HTMLElement>(function InitialPage() {
   const { nextSection } = useParallax();
 
   const context = useContext(ParallaxContext);

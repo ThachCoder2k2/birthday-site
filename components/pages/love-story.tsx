@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { ArrowLeftIcon, Heart, Sparkles } from 'lucide-react';
+import { ArrowLeftIcon } from 'lucide-react';
 import { useContext } from 'react';
 import { ParallaxContext } from '../MainPage';
 import { StoryPanel } from '../ui/story-panel';
