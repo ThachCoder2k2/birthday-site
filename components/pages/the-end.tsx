@@ -1,6 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+import { useState, useEffect, useContext } from 'react';
+import { ParallaxContext } from '../MainPage';
 
 export default function BirthdayScene() {
   const [particles, setParticles] = useState<
@@ -9,7 +11,8 @@ export default function BirthdayScene() {
   const [mysticalOrbs, setMysticalOrbs] = useState<
     Array<{ id: number; x: number; y: number; color: string }>
   >([]);
-
+  const context = useContext(ParallaxContext);
+  const theme = context?.theme;
   useEffect(() => {
     // Generate floating particles for cinematic effect
     const newParticles = Array.from({ length: 60 }, (_, i) => ({
@@ -38,7 +41,7 @@ export default function BirthdayScene() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden relative">
+    <div className="min-h-screen overflow-hidden relative font-waiting">
       {/* Cinematic Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
 
@@ -282,7 +285,12 @@ export default function BirthdayScene() {
           </h1>
           <div className="absolute -inset-6 bg-gradient-to-r from-pink-500/20 via-rose-500/20 via-purple-500/20 to-gold-500/20 blur-2xl rounded-full"></div>
         </div>
-        <p className="text-3xl md:text-4xl text-rose-300 font-light animate-bounce tracking-wide">
+        <p
+          className={cn(
+            'text-3xl md:text-4xl text-rose-300 font-light animate-bounce tracking-wide',
+            theme.primary
+          )}
+        >
           Make a wish babi!!!!
         </p>
       </div>

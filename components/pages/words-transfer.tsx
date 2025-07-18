@@ -5,29 +5,35 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { CornerDownRightIcon } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
+import { useParallax } from '../MainPage';
 
 // Move sentences outside component to prevent re-creation on every render
 const sentences: string[] = [
   'Hey',
   'Before this ends',
   'I have a few words for u babi',
-  'I wanna do more but i cant finish the thing i expected it to be. The animation stuffs cost me sooo muchhh.',
+  'I wanna do more but i cant finish the thing i expected it to be. ',
+  'The animation stuffs cost me sooo muchhh.',
   'And you know, works, stuffs',
-  'I still blame myself on how i cant finish this, this is only 1/10 of what im capable of',
+  'I still blame myself on how i cant finish this, ',
+
+  'this is only 1/10 of what im capable of',
   'Sorry babi',
   'The time passed by, ive been thinking alots',
   'I know ure still too young to understand my struggle',
   'Im not saying that u should',
   'Im saying that im trying for u, day by day',
   'And time after time, im afraid that u will go again',
-  'through what i saw in your words, its got shorten again u know T-T',
+  'through what i saw in your words, ',
+  'its got shorten again u know T-T',
   'Atually, i know the reason why',
   'I am too busy with things lately',
   'So u have to keep your mind busy too',
   'I feel like u can be mad anytime eh',
   'Im afraid that i cant be enough for u',
   'I hope that ive given for u the best as i can',
-  'I hope that ull keep loving me, and make me the happiest man babbu ',
+  'I hope that ull keep loving me, ',
+  ' and make me the happiest man babbii',
   'We cant expect the future',
   'So lets hope with me',
   'Tonight',
@@ -39,13 +45,7 @@ function WordsTransfer() {
   const sentenceRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [textAnimationComplete, setTextAnimationComplete] =
     useState<boolean>(false);
-  const [currentSection, setCurrentSection] = useState(0);
-
-  // Function to handle next section
-  const nextSection = () => {
-    setCurrentSection((prev) => prev + 1);
-  };
-
+  const { nextSection } = useParallax();
   // Theme object (since we don't have the useParallax hook)
   const theme = {
     primary: 'text-pink-600',
@@ -191,20 +191,6 @@ function WordsTransfer() {
           <span className="font-semibold text-2xl md:text-3xl">Click here</span>
         </div>
       </div>
-
-      {/* Next section placeholder */}
-      {currentSection > 0 && (
-        <div className="min-h-screen w-full bg-pink-200 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-pink-800 mb-4">
-              Next Section
-            </h2>
-            <p className="text-xl text-pink-600">
-              The animation completed! Section {currentSection}
-            </p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

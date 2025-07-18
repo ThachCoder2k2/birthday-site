@@ -247,7 +247,7 @@ const ParallaxGallery = () => {
           >
             {' '}
             <ArrowRightIcon
-              className="text-black"
+              className="text-black cursor-pointer"
               size={42}
               onClick={() => nextSection()}
             />
